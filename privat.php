@@ -1,19 +1,21 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>Foundation for Sites</title>
+    <title>Geschützter Bereich</title>
 </head>
 <body>
+<?php if ($_SESSION['loggedin'] == true): ?>
+    <h1>Geschützter Bereich</h1>
+    <h2>Hallo <?= $_SESSION['username']; ?></h2>
 
-<form action="loginscript.php" method="POST">
-    <label for="username">Benutzername</label>
-    <input type="text" id="username" name="username">
 
-    <label for="password"></label>
-    <input type="password" id="password" name="password">
-
-    <input type="submit" value="Senden" name="submit">
-</form>
-
+    <ul>
+        <li><a href="logout.php">Logout</a></li>
+    </ul>
+<?php else: ?>
+    <h1>Kein Zugriff!</h1>
+<?php endif; ?>
 </body>
 </html>

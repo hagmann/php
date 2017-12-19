@@ -56,7 +56,8 @@ echo '</pre>';
 // Array Key/Value
 $person = [
     'Vorname' => 'Max',
-    'Nachname' => 'Muster'
+    'Nachname' => 'Muster',
+    'Newsletter' => false
 ];
 
 // Neuer Array Eintrag
