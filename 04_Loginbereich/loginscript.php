@@ -15,6 +15,9 @@ if (isset($_POST['submit'])) {
 
             header('Location: privat.php');
             exit;
+        } else {
+            echo 'login falsch';
+            header("Refresh: 1; url=login.php");
         }
     }
 }

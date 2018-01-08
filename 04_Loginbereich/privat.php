@@ -10,7 +10,6 @@
     <h1>Geschützter Bereich</h1>
     <h2>Hallo <?= $_SESSION['username']; ?></h2>
 
-
     <ul>
         <li><a href="logout.php">Logout</a></li>
     </ul>
