@@ -5,7 +5,9 @@
 </head>
 <body>
 
-<form action="kontakt.php" method="POST">
+
+
+<form method="POST">
     <label for="vorname">Vorname</label>
     <input type="text" id="vorname" name="vorname">
 
