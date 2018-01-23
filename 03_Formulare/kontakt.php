@@ -22,19 +22,14 @@
 
     <input type="submit" value="Senden" name="submit">
 </form>
-
-
+	
 <?php
-
-if (isset($_POST['vorname'])) {
-    // Formularwerte in Variable $_POST gespeichert
-    var_dump($_POST);
-
-    // Formulardaten weiterverwenden
-    $to      = 'hello@example.com';
-    mail($to, $_POST['betreff'], $_POST['mitteilung']);
-}
-
-?>
+	
+	if(!empty($_POST['vorname']) && !empty($_POST['nachname']) && !empty($_POST['betreff']) && !empty($_POST['mitteilung'])) {
+		$headers = 'From: Simon Hagmann <info@hagmann.io>' . "\r\n";
+		mail('info@hagmann.ch', $_POST['betreff'], $_POST['mitteilung'], $headers); 
+	}
+	
+	?>
 </body>
 </html>
